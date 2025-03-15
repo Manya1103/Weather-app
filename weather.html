@@ -12,6 +12,9 @@
             <input type="text" placeholder="Enter City Name" spellcheck="false">
             <button><img src="images/search.png"></button>
         </div>
+        <div class="error">
+            <p>"INVALID CITY NAME"</p>
+        </div>
         <div class="weather">
             <img src="images/rain.png" class="weather-icon">
             <h1 class="temp">22°C</h1>
@@ -27,25 +30,14 @@
              <div class="col">
                 <img src="images/wind.png">
             <div>
-                <p class="wind">15 km/hr</p>
+                <p class="wind">15 km/h</p>
                 <p>Wind Speed</p>
             </div>
          </div>
             </div>
          </div>
     </div>
-    <script>
-        const apiKey="a1b206420640eae132e9d460463fb73a";
-        const apiUrl="https://api.openweathermap.org/data/2.5/weather?q=London&units=metric";
-
-        async function checkweather(){
-            const response = await fetch (apiUrl + `&appid=${apiKey}`);
-            var data = await response.json();
-
-            console.log(data);
-        }
-        checkweather();
-        
+    <script src="weather.js">
     </script>
     
 </body>
