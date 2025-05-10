@@ -45,4 +45,4 @@
 
        searchButton.addEventListener("click", ()=>{
             checkWeather (searchBox.value);
-        })
+        });
